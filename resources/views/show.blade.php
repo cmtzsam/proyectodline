@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resultados</title>
-  {{-- Estilos css --}}
-  <link rel="stylesheet" href="{{ asset('css/buscadorstyle.css') }}">
-  {{-- Libreria PDF --}}
-  <script src="assets/pspdfkit.js"></script>
-</head>
-
-<body>
+@extends('layout')
+@section('title', 'Busqueda de catalogos')
+@push('librerias')
+    {{-- Libreria PDF --}}
+    <script src="assets/pspdfkit.js"></script>
+@endpush
+@section('content')
   <main class="buscadorTemplate">
     <section class="buscadorTemplate--banner results-banner">
       <div class="o-container">
@@ -88,5 +80,4 @@
       </div>
     </section>
   </main>
-</body>
-</html>
+@endsection
